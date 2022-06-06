@@ -1,0 +1,2 @@
+# Objetivo:
+Praticar algoritmos: Javascript 
