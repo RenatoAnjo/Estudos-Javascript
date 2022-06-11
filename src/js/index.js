@@ -287,3 +287,66 @@ function intervaloPares(inicio, fim, quantidade) {
 
   return pares
 }
+
+/* Conta Letras
+Implemente a função ao lado que recebe como parâmetros uma string e uma letra e deve retornar a quantidade de ocorrências da letra passada na string passada.
+
+Exemplo: se for passado “carreira” e a letra “r”, a função deve retornar 3
+
+Exemplo: se for passado “ovo” e a letra “s”, a função deve retornar 0
+
+Dica: Strings se comportam parecido com arrays. Então, podemos obter o número de caracteres de uma string utilizando a propriedade length como se segue:
+
+let palavra = "abcdef";
+let tamanho=palavra.length;//Nesse caso a variável tamanho vai receber 6 que é o número de caracteres em palavra
+Outra semelhança é que podemos acessar um caractere da string por sua posição. Então, se quisermos acessar a primeria letra da string palavra fazemos:
+
+let primeiraLetra=palavra[0]//Com isso, temos que primeiraLetra vai receber a string "a" */
+
+function contaLetras(string, letra) {
+  let quantidade = 0
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === letra) {
+      quantidade++
+    }
+  }
+
+  return quantidade
+}
+
+/* Troca as Vogais
+Implemente a função ao lado que recebe uma string como parâmetro e retorna a string original, mas com o número 1 no lugar das vogais
+
+Exemplo: se for passada a palavra “uva”, a função deve retornar “1v1”
+
+Exemplo: se for passada a palavra “carro”, a função deve retornar “c1rr1”
+
+Dica: para realizar essa questão você vai precisar de uma ferramenta nova. Talvez seja útil construir um array vazio. Você pode fazer isso com o seguinte comando:
+
+const arr=[] //constrói um array vazio chamado "arr"
+Depois disso, você, talvez, queira encher esse novo array com elementos. Você pode fazer isso escrevendo ".push" logo após o nome do array. Então, para inserir "3" no array que acabamos de criar fazemos:
+
+arr.push(3) //Insere 3 dentro do array "arr" */
+
+function trocaVogais(string) {
+  let novaString = ''
+
+  for (let i = 0; i < string.length; i++) {
+    let caractere = string[i]
+
+    if (
+      caractere === 'a' ||
+      caractere === 'e' ||
+      caractere === 'i' ||
+      caractere === 'o' ||
+      caractere === 'u'
+    ) {
+      novaString += '1'
+    } else {
+      novaString += caractere
+    }
+  }
+
+  return novaString
+}
