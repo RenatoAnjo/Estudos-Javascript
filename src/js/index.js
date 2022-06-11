@@ -350,3 +350,54 @@ function trocaVogais(string) {
 
   return novaString
 }
+
+/* Remover os Números
+Implemente a função ao lado que recebe como parâmetro uma string, misturando letras e números, e deve retornar uma string contendo apenas as letras da string passada na mesma ordem
+
+Exemplo: se for passada a string “ab2c4d”, a função deve retornar “abcd”
+
+Exemplo: se for passada a string “1234”, a função deve retornar “” */
+
+function tiraNumeros(string) {
+  let resultado = ''
+
+  for (let i = 0; i < string.length; i++) {
+    let c = string[i]
+
+    if (
+      c !== '0' &&
+      c !== '1' &&
+      c !== '2' &&
+      c !== '3' &&
+      c !== '4' &&
+      c !== '5' &&
+      c !== '6' &&
+      c !== '7' &&
+      c !== '8' &&
+      c !== '9'
+    ) {
+      resultado += c
+    }
+  }
+
+  return resultado
+}
+
+/* Soma até a Meta
+Implemente a função ao lado que recebe 2 números como parâmetros e retorna um array contendo os números consecutivos ao 1o parâmetro até o valor em que, ao somar todos os números no array, temos o valor passado no 2o parâmetro.
+
+Exemplo: se for passado os valores “2” e “12”, a função deve retornar o array [3,4,5], pois 3+4+5=12 que é a meta passada no 2o parâmetro
+
+Exemplo: se for passado os valores “12” e “58”, a função deve retornar o array [13,14,15,16], pois 13+14+15+16=58 que é a meta informada no 2o parâmetro */
+
+function somaAteMeta(inicio, meta) {
+  let numeros = []
+  let soma = 0
+
+  for (let i = inicio + 1; soma < meta; i++) {
+    numeros.push(i)
+    soma += i
+  }
+
+  return numeros
+}
