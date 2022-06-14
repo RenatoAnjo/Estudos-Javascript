@@ -526,3 +526,74 @@ function totalDeApertos(n) {
   let resultado = (n * (n - 1)) / 2
   return resultado
 }
+
+/* Média Ponderada numa Turma
+
+Implemente a função ao lado que recebe dois arrays como parâmetros: listaValores e listaPesos. A sua função deve retornar a média ponderada utilizando os arrays passados. A média é calculada a partir da soma da multiplicação de cada valor por seu respectivo peso, e dividindo o total dessa soma pela soma dos pesos.
+
+
+Exemplo:
+
+mp = ((5*1) + (8*2) + (10*3)) / 1 + 2 + 3 = 51/6 = 8,5
+
+
+Se forem passados listaValores = [5, 8, 10] com a listaPesos = [1, 2, 3], a função deve retornar 8,5 porque primeiro multiplicamos o valor 5 pelo peso 1, somamos ao valor 8 multiplicado pelo peso 2, e somamos ao valor 10 multiplicado pelo peso 3. Em seguida pegamos esse total acumulado e dividimos pela soma dos pesos (1 + 2 + 3). */
+
+function calculaPesoTotal(listaPesos) {
+  let total = 0
+  for (let index = 0; index < listaPesos.length; index += 1) {
+    total += listaPesos[index]
+  }
+  return total
+}
+
+function mediaPonderada(listaValores, listaPesos) {
+  //escreva seu código aqui :);
+  let media = 0
+  const pesoTotal = calculaPesoTotal(listaPesos)
+  for (let index = 0; index < listaValores.length; index += 1) {
+    media += listaValores[index] * listaPesos[index]
+  }
+  const result = media / pesoTotal
+  return result
+}
+
+/* Triplica String
+
+Implemente a função ao lado que recebe uma string que contém apenas letras minúsculas como parâmetro e retorna uma nova string que consiste na string inicial, mas onde houver uma vogal você deve substituir por 3 vogais iguais
+
+
+Exemplo:
+
+
+Se for passado str = “caixa”, então o retorno da função deve ser “caaaiiixaaa”
+
+
+Se for passado str = ‘teste’, então o retorno da função deve ser "teeesteee"
+
+
+Se str = ‘’kappa’, então o retorno da função deve ser ‘’kaaappaaa”
+
+
+Dica: Strings se comportam parecido com arrays. Então, podemos obter o número de caracteres de uma string utilizando a propriedade length como se segue:
+
+let palavra = "abcdef"
+let tamanho = palavra.length; //Nesse caso a variável tamanho vai receber o valor 6 que é o número de caracteres em palavra
+
+
+Outra semelhança é que podemos acessar um caractere da string por sua posição, então se quisermos pegar a primeira letra da palavra acima podemos fazer:
+
+let primeiraLetra = palavra[0]//Com isso, temos que primeiraLetra recebeu a string “a”;
+let segundaLetra = palavra[1]//Com isso, temos que segundaLetra recebeu a string “b”; */
+
+function triplicaEntrada(str) {
+  //escreva seu código aqui :)
+  const vogais = ['a', 'e', 'i', 'o', 'u']
+  const newString = str.split('')
+  for (let index = 0; index < newString.length; index += 1) {
+    if (vogais.includes(newString[index])) {
+      newString[index] += newString[index] + newString[index]
+    }
+  }
+  return newString.join('')
+}
