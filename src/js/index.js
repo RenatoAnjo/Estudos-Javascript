@@ -463,3 +463,66 @@ function letrasRepetidas(string) {
 
   return letras
 }
+
+/* Array Numerada
+
+Implemente a função ao lado que recebe um valor como parâmetro e retorna um array contendo os elementos de 1 até o valor passado como parâmetro.
+
+
+Exemplo:
+
+
+Se for passado como parâmetro n = 5, sua função deve retornar [1, 2, 3, 4, 5]
+
+Se for passado como parâmetro n =10, sua função deve retornar [1, 2, 3, 4, 5, 6, 7, 8 ,9, 10]
+
+
+Observação:
+
+
+Sempre será passado como parâmetro um valor maior ou igual a 1
+
+
+Dica:
+
+
+Para adicionar um elemento a um array você pode utilizar o comando “.push”. Então caso tenha um array “arr=[]” e queira inserir o número “3” nesse array basta fazer “arr.push(3)”. */
+
+function crieArray(n) {
+  let array = []
+  for (let counter = 1; counter <= n; counter++) {
+    array.push(counter)
+  }
+  return array
+}
+
+/* Índice do Valor
+Implemente a função ao lado que recebe uma array e um valor e retorna a posição que esse valor se encontra na array (começando em 0).
+
+Exemplo: deve retornar 2 quando passada a array [10, 30, 50, 70, 90] e o valor 50. */
+
+function indiceDoValor(array, valor) {
+  // escreva seu código aqui :)
+  for (let i = 0; counter < array.length; i++) {
+    if (array[i] === valor) {
+      return i
+    }
+  }
+  return -1
+}
+
+/* Apertos de Mão
+
+Implemente ao lado a função que recebe um número “n” que representa a quantidade de estudantes presentes em um evento e retorna a quantidade mínima de apertos de mãos necessários para todos se cumprimentarem.
+
+
+Exemplo:
+
+
+se for passado “n=3”, temos 3 pessoas: p1, p2 e p3. Então p1 aperta a mão de p2 e p3, p2 aperta a mão de p3 e todos já se cumprimentaram. Foram necessários 3 apertos de mão para que todos se cumprimentassem */
+
+function totalDeApertos(n) {
+  //escreva seu código aqui :)
+  let resultado = (n * (n - 1)) / 2
+  return resultado
+}
