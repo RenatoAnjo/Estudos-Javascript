@@ -597,3 +597,30 @@ function triplicaEntrada(str) {
   }
   return newString.join('')
 }
+
+function calculaNumeros(lst, number) {
+  let result = 0
+  for (let index = 0; index < lst.length; index++) {
+    if (number !== lst[index]) {
+      result += lst[index]
+    }
+  }
+  return result
+}
+
+function miniMaxSum(lst) {
+  //escreva seu código aqui :)
+  const min = Math.min(...lst)
+  const max = Math.max(...lst)
+  const miniMaxSumValues = [calculaNumeros(lst, max), calculaNumeros(lst, min)]
+  return miniMaxSumValues
+}
+
+function somaTresUltimosNumeros(array) {
+  const tresUltimosNumeros = array.slice(array.length - 3, array.length)
+  let somaTresNumeros = 0
+  for (let index = 0; index < tresUltimosNumeros.length; index += 1) {
+    somaTresNumeros += tresUltimosNumeros[index]
+  }
+  return somaTresNumeros
+}
