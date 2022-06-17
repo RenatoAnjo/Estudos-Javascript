@@ -713,3 +713,110 @@ function triplicaVogais(string) {
 console.log(triplicaVogais('CAIXA'))
 console.log(triplicaVogais('TESTE'))
 console.log(triplicaVogais('KAPPA'))
+
+//Imprimir números de 1 a 10
+for (var i = 1; i <= 10; i++) {
+  console.log(i)
+}
+//Imprimir os números impares menores que 100
+for (var i = 1; i <= 100; i += 2) {
+  console.log(i)
+}
+//Imprimir a tabuada do número 8
+for (var i = 1; i <= 10; i++) {
+  var row = '8 * ' + i + ' = ' + 8 * i
+  console.log(row)
+}
+//Imprimir todas as tabuadas do número 1 ao 10
+function ImprimirTabuada(n) {
+  for (var i = 1; i <= 10; i++) {
+    var linha = n + ' * ' + i + ' = ' + n * i
+    console.log(linha)
+  }
+}
+for (var i = 1; i <= 10; i++) {
+  ImprimirTabuada(i)
+  console.log('')
+}
+
+// Soma dos números de 1 a 10
+var soma = 0
+for (var i = 1; i <= 10; i++) {
+  soma += i
+}
+console.log(soma)
+
+//Calculado o fatorial de 10
+var numero = 1
+for (var i = 1; i <= 10; i++) {
+  numero *= i
+}
+console.log(numero)
+
+//Criar uma função para calcular a porcentagem de um número
+function porcentagem(num, per) {
+  return (num / 100) * per
+}
+console.log(porcentagem(1000, 57.18))
+
+//Calcular a soma dos números impares maiores que 10 e menores que 30
+var soma = 0
+for (var i = 11; i <= 30; i += 2) {
+  soma += i
+}
+console.log(soma)
+
+//Criar uma função que converta uma temperatura de Celsius para Fahrenheit
+function celsiusParaFahrenheit(n) {
+  return n * 1.8 + 32
+}
+var r = celsiusParaFahrenheit(20)
+console.log(r)
+
+//Criar uma função que converta uma temperatura de Fahrenheit para Celsius
+function fahrenheitParaCelsius(n) {
+  return (n - 32) / 1.8
+}
+var r = fahrenheitParaCelsius(68)
+console.log(r)
+
+//Calcular a soma dos números de um array
+function somarArray(ar) {
+  var soma = 0
+  for (var i = 0; i < ar.length; i++) {
+    soma += ar[i]
+  }
+  return soma
+}
+var ar = [2, 3, -1, 5, 7, 9, 10, 15, 95]
+var soma = somarArray(ar)
+console.log(soma)
+
+//Calcular a média de todos os números de um array
+function mediaArray(ar) {
+  var n = ar.length
+  var soma = 0
+  for (var i = 0; i < n; i++) {
+    soma += ar[i]
+  }
+  return soma / n
+}
+var ar = [1, 3, 9, 15, 90]
+var media = mediaArray(ar)
+console.log('mediaArray: ', media)
+
+/*Criar uma função que receba como parâmetro um array de números e retorne um array
+contendo somente números positivos.*/
+
+function retornarPositivos(ar) {
+  var ar2 = []
+  for (var i = 0; i < ar.length; i++) {
+    var el = ar[i]
+    if (el >= 0) {
+      ar2.push(el)
+    }
+  }
+  return ar2
+}
+var ar = [-5, 10, -3, 12, -9, 5, 90, 0, 1]
+var ar2 = retornarPositivos(ar)
