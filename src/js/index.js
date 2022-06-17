@@ -624,3 +624,92 @@ function somaTresUltimosNumeros(array) {
   }
   return somaTresNumeros
 }
+
+let listaInicial = [0, 1, 2]
+let novaLista = []
+
+function sequenciaDriven(numeroInteiro) {
+  // verificar se numero nao eh inteiro ou menor que zero
+  if (!Number.isInteger(numeroInteiro) || numeroInteiro < 0) {
+    console.log('Você não informou um número inteiro, maior ou igual a zero')
+    return
+  }
+
+  console.log(`${numeroInteiro} é um número inteiro`)
+
+  // buscar o numero na listaInicial
+  if (listaInicial.includes(numeroInteiro)) {
+    console.log(`O número ${numeroInteiro} está na listagem`)
+    // filtrar os menores ou iguais que estao na listaInicial
+    novaLista = listaInicial.filter(numero => numero <= numeroInteiro)
+    return novaLista
+  }
+
+  console.log('CALCULO DE NOVO NUMERO')
+
+  let contador = 0
+  let limite = numeroInteiro
+
+  while (contador < limite) {
+    // 1. Total de elementos -1 indica a ultima posicao
+    let posicaoFinal = listaInicial.length - 1
+    // console.log('Posicao Final ' + posicaoFinal)
+
+    // 2. Logica da progressao numerica
+    // proximoNumero = ultima_posicao + penultima + antepenultima
+    let proximoNumero =
+      listaInicial[posicaoFinal] +
+      listaInicial[posicaoFinal - 1] +
+      listaInicial[posicaoFinal - 2]
+    //console.log('Próximo número ' + proximoNumero)
+
+    // adicionar resultado na lista
+    listaInicial.push(proximoNumero)
+
+    // incremento no contador do while
+    contador++
+  }
+
+  return listaInicial.filter(numero => numero <= numeroInteiro)
+} // fim da funcao
+
+console.log('Sequência Driven')
+console.log(sequenciaDriven(100))
+
+// Implemente a função ao lado que recebe uma string que contém apenas letras minúsculas como parâmetro
+// e retorna uma nova string que consiste na string inicial, mas onde houver uma vogal você deve substituir por 3 vogais iguais
+// Se for passado str = “caixa”, então o retorno da função deve ser “caaaiiixaaa”
+// Se for passado str = ‘teste’, então o retorno da função deve ser "teeesteee"
+// Se str = ‘kappa’, então o retorno da função deve ser ‘’kaaappaaa”
+
+let str = ''
+
+function triplicaVogais(string) {
+  let palavra = string.toLowerCase()
+  console.log(palavra)
+
+  // split para separar cada caractere
+  let novaPalavra = palavra.split('')
+  console.log(novaPalavra)
+
+  let triplicada = []
+
+  novaPalavra.map((letra, index, palavraNova) => {
+    if (letra == 'a') letra = 'aaa'
+    if (letra == 'e') letra = 'eee'
+    if (letra == 'i') letra = 'iii'
+    if (letra == 'o') letra = 'ooo'
+    if (letra == 'u') letra = 'uuu'
+    console.log(letra)
+    triplicada.push(letra)
+  })
+  console.log(triplicada)
+
+  let palavraTriplicada = triplicada.join().replaceAll(',', '')
+
+  return palavraTriplicada
+}
+
+console.log(triplicaVogais('CAIXA'))
+console.log(triplicaVogais('TESTE'))
+console.log(triplicaVogais('KAPPA'))
