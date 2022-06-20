@@ -899,3 +899,48 @@ console.log(3, ' é um número primo? ', numeroPrimo(3))
 console.log(4, ' é um número primo? ', numeroPrimo(4))
 console.log(5, ' é um número primo? ', numeroPrimo(5))
 console.log(9, ' é um número primo? ', numeroPrimo(9))
+
+/*Crie uma função que calcule a raiz quadrada de um número e retorne um número inteiro
+como resultado*/
+function raiz_quadrada_para_inteiro(num) {
+  return parseInt(Math.sqrt(num) + '')
+}
+console.log(raiz_quadrada_para_inteiro(17))
+
+// Retornar a maior string de um array
+function maiorString(arr) {
+  var maior = ''
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].length > maior.length) {
+      maior = arr[i]
+    }
+  }
+  return maior
+}
+console.log(
+  maiorString([
+    'Sao Paulo',
+    'Rio de Janeiro',
+    'Amazonas',
+    'Pernambuco',
+    'Santa Catarina',
+    'Rio Grande do Norte',
+    'Sergipe'
+  ])
+)
+
+//Criar uma função que junte dois arrays e retorno o resultado como um novo array
+function juntarArrays(ar1, ar2) {
+  var ar = []
+  for (let el of ar1) {
+    ar.push(el)
+  }
+  for (let el of ar2) {
+    ar.push(el)
+  }
+  return ar
+}
+var ar1 = [1, 2, 3]
+var ar2 = [4, 5, 6]
+var ar = juntarArrays(ar1, ar2)
+console.log(ar)
