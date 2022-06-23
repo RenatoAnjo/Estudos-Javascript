@@ -988,3 +988,42 @@ var ar = [23, 1000, 1, -1, 8, 3]
 console.log(ar)
 bubbleSort(ar)
 console.log(ar)
+
+//Contar a quantidade de palavras em um texto
+function contarPalavras(text) {
+  var existe_separador = true
+  var palavras = 0
+  for (var c of text) {
+    if (separador(c)) {
+      existe_separador = true
+      continue
+    }
+    if (existe_separador) {
+      palavras++
+      existe_separador = false
+    }
+  }
+  return palavras
+}
+function separador(c) {
+  var separadores = [' ', '\t', '\n', '\r', ',', ';', '.', '!', '?']
+  return separadores.includes(c)
+}
+console.log(contarPalavras(''))
+console.log(contarPalavras(' '))
+console.log(contarPalavras('SQL Server!! '))
+console.log(contarPalavras(' React Native PHP ASP'))
+console.log(contarPalavras(' O PHP existe a mais de 26 anos '))
+console.log(contarPalavras('Vamos estudar bancos de dados relacionais'))
+
+//Criar uma função para inverter um array
+function inverterArray(ar) {
+  var ar2 = []
+  for (var i = ar.length - 1; i >= 0; i--) {
+    ar2.push(ar[i])
+  }
+  return ar2
+}
+var ar = [1, 2, 3]
+var ar2 = inverterArray(ar)
+console.log(ar2)
