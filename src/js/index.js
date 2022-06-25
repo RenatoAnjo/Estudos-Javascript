@@ -1148,3 +1148,148 @@ var Calc = {
     return num + 1
   }
 }
+
+//Exercício de lógica de programação para calcular o juros simples.
+
+var assert = require('assert')
+
+//
+// Calcula o juros simples
+//
+var juros_simples = function () {
+  return 0
+}
+
+// Este é o nosso teste.
+// Sabemos que 16000 * 0.04 * 4 = 2560, logo
+// a variável `juros` deve ter o valor igual a 2560.
+try {
+  assert.equal(2560, juros_simples(16000, 0.04, 4))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Calcula o juros simples
+//
+var juros_simples = function (capital, taxa, n_periodos) {
+  return capital * taxa * n_periodos
+}
+
+// Este é o nosso teste.
+// Sabemos que 16000 * 0.04 * 4 = 2560, logo
+// a variável `juros` deve ter o valor igual a 2560.
+try {
+  assert.equal(2560, juros_simples(16000, 0.04, 4))
+} catch (e) {
+  console.log(e)
+}
+
+//Escreva uma função para cada uma das quatro operações matemáticas simples.
+
+var assert = require('assert')
+
+//
+// Funções...
+//
+
+var somar = function (num, add) {}
+
+var subtrair = function (num, sub) {}
+
+var multiplicar = function (num, mult) {}
+
+var dividir = function (num, divisor) {}
+
+//
+// Testes
+//
+try {
+  var num = 10
+
+  assert.equal(12, somar(num, 2))
+  assert.equal(8, subtrair(num, 2))
+  assert.equal(20, multiplicar(num, 2))
+  assert.equal(5, dividir(num, 2))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Funções...
+//
+
+var somar = function (num, add) {
+  return num + add
+}
+
+var subtrair = function (num, sub) {
+  return num - sub
+}
+
+var multiplicar = function (num, mult) {
+  return num * mult
+}
+
+var dividir = function (num, divisor) {
+  return num / divisor
+}
+
+//
+// Testes
+//
+try {
+  var num = 10
+
+  assert.equal(12, somar(num, 2))
+  assert.equal(8, subtrair(num, 2))
+  assert.equal(20, multiplicar(num, 2))
+  assert.equal(5, dividir(num, 2))
+} catch (e) {
+  console.log(e)
+}
+
+//Exercício de lógica de programação resolvido para descobrir o custo final de um carro.
+
+var assert = require('assert')
+
+//
+// Retorna o custo final da fabricação de um carro
+//
+var custoFinal = function () {
+  return 0
+}
+
+//
+// Seu teste
+//
+try {
+  assert.equal(17300, custoFinal(10000))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Retorna o custo final da fabricação de um carro
+//
+var custoFinal = function (custoFabrica) {
+  var custoDistribuidor = custoFabrica * 0.28
+  var custoImpostos = custoFabrica * 0.45
+
+  return custoFabrica + custoDistribuidor + custoImpostos
+}
+
+//
+// Seu teste
+//
+try {
+  assert.equal(17300, custoFinal(10000))
+} catch (e) {
+  console.log(e)
+}
