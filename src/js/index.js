@@ -1293,3 +1293,123 @@ try {
 } catch (e) {
   console.log(e)
 }
+
+//Exercício de lógica de programação para calcular o juros simples.
+
+var assert = require('assert')
+
+//
+// Calcula o juros simples
+//
+var juros_simples = function () {
+  return 0
+}
+
+// Este é o nosso teste.
+// Sabemos que 16000 * 0.04 * 4 = 2560, logo
+// a variável `juros` deve ter o valor igual a 2560.
+try {
+  assert.equal(2560, juros_simples(16000, 0.04, 4))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Calcula o juros simples
+//
+var juros_simples = function (capital, taxa, n_periodos) {
+  return capital * taxa * n_periodos
+}
+
+// Este é o nosso teste.
+// Sabemos que 16000 * 0.04 * 4 = 2560, logo
+// a variável `juros` deve ter o valor igual a 2560.
+try {
+  assert.equal(2560, juros_simples(16000, 0.04, 4))
+} catch (e) {
+  console.log(e)
+}
+
+//Exercício de lógica de programação para calcular o reajuste do salário
+
+var assert = require('assert')
+
+//
+// Reajusta o salário
+//
+var reajustar_salario = function (salario, reajuste) {
+  return 0
+}
+
+// Este é o nosso teste.
+// Sabemos que 1000 * 0.15 = 150, logo
+// a função `reajustar_salario` deve ter o valor igual a 150.
+try {
+  assert.equal(150, reajustar_salario(1000, 0.15))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Reajusta o salário
+//
+var reajustar_salario = function (salario, reajuste) {
+  return salario * reajuste
+}
+
+// Este é o nosso teste.
+// Sabemos que 1000 * 0.15 = 150, logo
+// a função `reajustar_salario` deve ter o valor igual a 150.
+try {
+  assert.equal(150, reajustar_salario(1000, 0.15))
+} catch (e) {
+  console.log(e)
+}
+
+//Exercício de lógica de programação para descobrir se um número é par ou ímpar.
+
+var assert = require('assert')
+
+//
+// Função que descobre se um número é par ou ímpar
+//
+var ehPar = function (numero) {}
+
+//
+// Testes
+//
+try {
+  assert.ok(ehPar(8))
+  assert.ok(!ehPar(7))
+  assert.ok(ehPar(0))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Função que descobre se um número é par ou ímpar
+//
+var ehPar = function (numero) {
+  if (numero % 2 == 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+//
+// Testes
+//
+try {
+  assert.ok(ehPar(8))
+  assert.ok(!ehPar(7))
+  assert.ok(ehPar(0))
+} catch (e) {
+  console.log(e)
+}
