@@ -1413,3 +1413,158 @@ try {
 } catch (e) {
   console.log(e)
 }
+
+//Exercício de lógica de programação para descobrir se um número é positivo ou negativo.
+
+var assert = require('assert')
+
+// Função que descobre se um número é positivo ou negativo
+//
+// retornará 1 caso positivo
+// retornará 0 caso negativo
+//
+var ehPositivo = function (numero) {}
+
+//
+// Testes
+//
+try {
+  assert.equal(1, ehPositivo(100))
+  assert.equal(1, ehPositivo(0))
+  assert.equal(0, ehPositivo(-100))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+// Função que descobre se um número é positivo ou negativo
+//
+// retornará 1 caso positivo
+// retornará 0 caso negativo
+//
+var ehPositivo = function (numero) {
+  if (numero >= 0) {
+    return 1
+  } else {
+    return 0
+  }
+}
+
+//
+// Testes
+//
+try {
+  assert.equal(1, ehPositivo(100))
+  assert.equal(1, ehPositivo(0))
+  assert.equal(0, ehPositivo(-100))
+} catch (e) {
+  console.log(e)
+}
+
+//Exercício de lógica de programação para descobrir se valor é maior ou menor que 10.
+
+var assert = require('assert')
+
+// Função que descobre se um número é ou não maior que 10
+//
+// retornará 1 caso seja maior
+// retornará 0 caso seja menor
+//
+var ehMaiorQue10 = function (valorQualquer) {}
+
+//
+// Testes
+//
+try {
+  assert.equal(1, ehMaiorQue10(17))
+  assert.equal(0, ehMaiorQue10(9))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Função que descobre se um número é ou não maior que 10
+//
+// retornará 1 caso seja maior
+// retornará 0 caso seja menor
+//
+var ehMaiorQue10 = function (valorQualquer) {
+  if (valorQualquer > 10) {
+    return 1
+  } else {
+    return 0
+  }
+}
+
+//
+// Testes
+//
+try {
+  assert.equal(1, ehMaiorQue10(17))
+  assert.equal(0, ehMaiorQue10(9))
+} catch (e) {
+  console.log(e)
+}
+
+//Exercício de lógica de programação para converter celsius em fahrenheit e vice versa.
+
+var assert = require('assert')
+
+//
+// Converte fahrenheit em celsius
+//
+function toCelsius(fahrenheit) {
+  // Aqui entra a lógica do programa.
+}
+
+//
+// Converte celsius em fahrenheit
+//
+function toFahrenheit(celsius) {
+  // Aqui entra a lógica do programa.
+}
+
+//
+// Testes
+//
+try {
+  var celsius = 100
+  var fahrenheit = 212
+
+  assert.equal(celsius, toCelsius(fahrenheit), 'msg')
+  assert.equal(fahrenheit, toFahrenheit(celsius), 'msg')
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Converte fahrenheit em celsius
+//
+function toCelsius(fahrenheit) {
+  return (5 * (fahrenheit - 32)) / 9
+}
+
+//
+// Converte celsius em fahrenheit
+//
+function toFahrenheit(celsius) {
+  return (celsius / 5) * 9 + 32
+}
+
+//
+// Testes
+//
+try {
+  var celsius = 100
+  var fahrenheit = 212
+
+  assert.equal(celsius, toCelsius(fahrenheit), 'msg')
+  assert.equal(fahrenheit, toFahrenheit(celsius), 'msg')
+} catch (e) {
+  console.log(e)
+}
