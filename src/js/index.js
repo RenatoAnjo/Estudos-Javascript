@@ -1568,3 +1568,176 @@ try {
 } catch (e) {
   console.log(e)
 }
+
+//Exercício de lógica de programação - bhaskara.
+
+var assert = require('assert')
+
+// Retorna o valor de delta
+var delta = function (a, b, c) {
+  return 0
+}
+
+// Retorna o valor da primeira raiz
+var raiz1 = function (a, b, c) {
+  return 0
+}
+
+// Retorna o valor da segunda raiz
+var raiz2 = function (a, b, c) {
+  return 0
+}
+
+//
+// Testes
+//
+try {
+  var a = 1
+  b = 0
+  c = -16
+
+  assert.equal(64, delta(a, b, c))
+  assert.equal(4, raiz1(a, b, c))
+  assert.equal(-4, raiz2(a, b, c))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+// Retorna o valor de delta
+var delta = function (a, b, c) {
+  return b * b - 4 * a * c
+}
+
+// Retorna o valor da primeira raiz
+var raiz1 = function (a, b, c) {
+  return ((-b + Math.sqrt(delta(a, b, c))) / 2) * a
+}
+
+// Retorna o valor da segunda raiz
+var raiz2 = function (a, b, c) {
+  return ((-b - Math.sqrt(delta(a, b, c))) / 2) * a
+}
+
+//
+// Testes
+//
+try {
+  var a = 1
+  b = 0
+  c = -16
+
+  assert.equal(64, delta(a, b, c))
+  assert.equal(4, raiz1(a, b, c))
+  assert.equal(-4, raiz2(a, b, c))
+} catch (e) {
+  console.log(e)
+}
+
+//Exercício de lógica de programação para descobrir se um número é primo.
+
+var assert = require('assert')
+
+// Função que descobre se o número é ou não primo.
+//
+// Retorna:
+//   0 para false (composto)
+//   1 para true  (primo)
+//
+var ehPrimo = function (num) {
+  return 0
+}
+
+// Função que descobre se dois números possuem divisão exata.
+//
+// Retorna:
+//   0 para false
+//   1 para true
+//
+var ehDivisaoExata = function (dividendo, divisor) {
+  return 0
+}
+
+//
+// Testes
+//
+try {
+  assert.equal(1, ehDivisaoExata(3, 1))
+  assert.equal(1, ehDivisaoExata(3, 3))
+  assert.equal(0, ehDivisaoExata(3, 2))
+
+  assert.equal(1, ehPrimo(2))
+  assert.equal(1, ehPrimo(3))
+  assert.equal(1, ehPrimo(5))
+  assert.equal(1, ehPrimo(7))
+  assert.equal(1, ehPrimo(11))
+  assert.equal(1, ehPrimo(13))
+
+  assert.equal(0, ehPrimo(4))
+  assert.equal(0, ehPrimo(6))
+  assert.equal(0, ehPrimo(9))
+  assert.equal(0, ehPrimo(10))
+  assert.equal(0, ehPrimo(12))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+// Função que descobre se o número é ou não primo.
+//
+// Retorna:
+//   0 para false (composto)
+//   1 para true  (primo)
+//
+var ehPrimo = function (num) {
+  var i,
+    quantDivisores = 0
+
+  for (i = 1; i <= num; i++) {
+    if (ehDivisaoExata(num, i)) {
+      quantDivisores++
+    }
+  }
+
+  if (quantDivisores == 2) {
+    return 1
+  } else {
+    return 0
+  }
+}
+
+// Função que descobre se dois números possuem divisão exata.
+//
+// Retorna:
+//   0 para false
+//   1 para true
+//
+var ehDivisaoExata = function (dividendo, divisor) {
+  return dividendo % divisor == 0
+}
+
+//
+// Testes
+//
+try {
+  assert.equal(1, ehDivisaoExata(3, 1))
+  assert.equal(1, ehDivisaoExata(3, 3))
+  assert.equal(0, ehDivisaoExata(3, 2))
+
+  assert.equal(1, ehPrimo(2))
+  assert.equal(1, ehPrimo(3))
+  assert.equal(1, ehPrimo(5))
+  assert.equal(1, ehPrimo(7))
+  assert.equal(1, ehPrimo(11))
+  assert.equal(1, ehPrimo(13))
+
+  assert.equal(0, ehPrimo(4))
+  assert.equal(0, ehPrimo(6))
+  assert.equal(0, ehPrimo(9))
+  assert.equal(0, ehPrimo(10))
+  assert.equal(0, ehPrimo(12))
+} catch (e) {
+  console.log(e)
+}
