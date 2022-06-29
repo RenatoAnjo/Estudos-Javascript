@@ -1741,3 +1741,89 @@ try {
 } catch (e) {
   console.log(e)
 }
+
+//Exercício de lógica de programação para somar os dígitos de um número inteiro.
+
+var assert = require('assert')
+
+var somarDigitos = function (numero) {}
+
+//
+// Testes
+//
+try {
+  assert.equal(8, somarDigitos(2015))
+  assert.equal(15, somarDigitos(456))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+var somarDigitos = function (numero) {
+  var soma = 0
+
+  while (numero != 0) {
+    soma += numero % 10
+    numero = parseInt(numero / 10) // <--- atenção
+  }
+
+  return soma
+}
+
+//
+// Testes
+//
+try {
+  assert.equal(8, somarDigitos(2015))
+  assert.equal(15, somarDigitos(456))
+} catch (e) {
+  console.log(e)
+}
+
+//Exercício de lógica de programação para descobrir o MDC (máximo divisor comum).
+
+var assert = require('assert')
+
+//
+// Função mdc
+//
+var mdc = function (num1, num2) {}
+
+//
+// Testes
+//
+try {
+  assert.equal(3, mdc(24, 9))
+  assert.equal(10, mdc(30, 20))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Função mdc
+//
+var mdc = function (num1, num2) {
+  var resto
+
+  do {
+    resto = num1 % num2
+
+    num1 = num2
+    num2 = resto
+  } while (resto != 0)
+
+  return num1
+}
+
+//
+// Testes
+//
+try {
+  assert.equal(3, mdc(24, 9))
+  assert.equal(10, mdc(30, 20))
+} catch (e) {
+  console.log(e)
+}
