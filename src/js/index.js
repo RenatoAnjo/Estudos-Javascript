@@ -1827,3 +1827,108 @@ try {
 } catch (e) {
   console.log(e)
 }
+
+//Exercício de lógica de programação que ajuda a desenvolver os diversos tipos de laços.
+
+var assert = require('assert')
+
+var vetor = [1, 2, 3, 4, 5]
+
+//
+// Testes
+//
+try {
+  assert.equal(1, vetor[0])
+  assert.equal(2, vetor[1])
+  assert.equal(3, vetor[2])
+  assert.equal(4, vetor[3])
+  assert.equal(5, vetor[4])
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+var i,
+  vetor = []
+
+for (i = 1; i < 6; i++) {
+  vetor.push(i)
+}
+
+//
+// Testes
+//
+try {
+  assert.equal(1, vetor[0])
+  assert.equal(2, vetor[1])
+  assert.equal(3, vetor[2])
+  assert.equal(4, vetor[3])
+  assert.equal(5, vetor[4])
+} catch (e) {
+  console.log(e)
+}
+
+//Exercício de lógica de programação onde criaremos uma função para somar um vetor.
+
+var assert = require('assert')
+
+//
+// Seu código
+//
+var somarLista = function (lista) {}
+
+//
+// Seu teste
+//
+try {
+  lista = [10, 20, 30, 0]
+  assert.equal(60, somarLista(lista))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Seu código
+//
+var somarLista = function (lista) {
+  var soma = 0
+  for (chave in lista) {
+    soma += lista[chave]
+  }
+  return soma
+}
+
+//
+// Seu teste
+//
+try {
+  lista = [10, 20, 30, 0]
+  assert.equal(60, somarLista(lista))
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+//
+// Seu código
+//
+var somarLista = function (lista) {
+  var soma = 0
+  for (var i = 0; i < lista.length; i++) {
+    soma += lista[i]
+  }
+  return soma
+}
+//
+// Seu teste
+//
+try {
+  lista = [10, 20, 30, 0]
+  assert.equal(60, somarLista(lista))
+} catch (e) {
+  console.log(e)
+}
