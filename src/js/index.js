@@ -1936,36 +1936,87 @@ try {
 //Exercício de lógica de programação para copiar um vetor
 
 var a = [1, 2]
-console.log(a); // [ 1, 2 ]
+console.log(a) // [ 1, 2 ]
 
 var b = a
-console.log(b); // [ 1, 2 ]
+console.log(b) // [ 1, 2 ]
 
 a.push(3)
-console.log(a); // [ 1, 2, 3 ]
-console.log(b); // [ 1, 2, 3 ]
+console.log(a) // [ 1, 2, 3 ]
+console.log(b) // [ 1, 2, 3 ]
 
-var assert = require('assert');
+var assert = require('assert')
 
 //
 // Seu código
 //
-var clonar = function(data){
-    var clone = [];
-    for(var i = 0; i < data.length; i++){
-        clone.push(data[i]);
-    }
-    return clone;
+var clonar = function (data) {
+  var clone = []
+  for (var i = 0; i < data.length; i++) {
+    clone.push(data[i])
+  }
+  return clone
 }
 //
 // Seu teste
 //
 try {
-
-    assert.deepEqual([10, 20, 30, 0], clonar([10, 20, 30, 0]));
-
-} catch(e) {
-    console.log(e);
+  assert.deepEqual([10, 20, 30, 0], clonar([10, 20, 30, 0]))
+} catch (e) {
+  console.log(e)
 }
 
 //Para comparar dois arrays precisamos usar deepEqual() ao invés de equal().
+
+//Exercício de lógica de programação para descobrir o índice do maior e o menor valor do vetor.
+
+var assert = require('assert')
+
+var arr = [6, 10, 4, 21, 9],
+  iMaior = 0,
+  iMenor = 0,
+  i = 0
+
+//
+// Sua lógica
+//
+
+//
+// Seu teste
+//
+try {
+  assert.equal(3, iMaior)
+  assert.equal(2, iMenor)
+} catch (e) {
+  console.log(e)
+}
+
+var assert = require('assert')
+
+var arr = [6, 10, 4, 21, 9],
+  iMaior = 0,
+  iMenor = 0,
+  i = 0
+
+//
+// Sua lógica
+//
+for (i = 0; i < arr.length; i++) {
+  if (arr[i] > arr[iMaior]) {
+    iMaior = i
+  }
+
+  if (arr[i] < arr[iMenor]) {
+    iMenor = i
+  }
+}
+
+//
+// Seu teste
+//
+try {
+  assert.equal(3, iMaior)
+  assert.equal(2, iMenor)
+} catch (e) {
+  console.log(e)
+}
