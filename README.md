@@ -1,2 +1,3 @@
 # Objetivo:
-Praticar algoritmos: Javascript 
+
+Praticar algoritmos: Javascript
