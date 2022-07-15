@@ -2219,47 +2219,105 @@ function Area() {
 
 //Triângulo
 
-var assert = require('assert');
+var assert = require('assert')
 
 function Triangulo(a, b, c) {
-    this.a = a;
-    this.b = b;
-    this.c = c;
-    this.validarForma = function() {
-
-        //
-        // Aqui entra a lógica de seu programa!
-        //
-
-    };
-};
-
-try {
-
-    // Caso positivo
-    var triangulo = new Triangulo(3, 4, 5);
-    assert.equal(true, triangulo.validarForma());
-
-    // Caso negativo
-    var triangulo = new Triangulo(1, 4, 5);
-    assert.equal(false, triangulo.validarForma());
-
-} catch(e) {
-    console.log(e);
+  this.a = a
+  this.b = b
+  this.c = c
+  this.validarForma = function () {
+    //
+    // Aqui entra a lógica de seu programa!
+    //
+  }
 }
 
-this.validarForma = function() {
+try {
+  // Caso positivo
+  var triangulo = new Triangulo(3, 4, 5)
+  assert.equal(true, triangulo.validarForma())
 
+  // Caso negativo
+  var triangulo = new Triangulo(1, 4, 5)
+  assert.equal(false, triangulo.validarForma())
+} catch (e) {
+  console.log(e)
+}
+
+this.validarForma = function () {
   //
   // Aqui entra a lógica de seu programa!
   //
-  if (this.a < (this.b + this.c)) {
-      if (this.b < (this.a + this.c)) {
-          if (this.c < (this.a + this.b)) {
-              return true;
-          }
+  if (this.a < this.b + this.c) {
+    if (this.b < this.a + this.c) {
+      if (this.c < this.a + this.b) {
+        return true
       }
+    }
   }
-  return false;
+  return false
+}
 
-};
+//Votos em relação ao total de eleitores
+
+var assert = require('assert')
+
+//
+// Classe Votos
+//
+function Votos(total_eleitores) {
+  ;(this.total_eleitores = total_eleitores),
+    (this.validos = 0),
+    (this.brancos = 0),
+    (this.nulos = 0)
+
+  this.percValidos = function () {
+    return 0
+  }
+
+  this.percBrancos = function () {
+    return 0
+  }
+
+  this.percNulos = function () {
+    return 0
+  }
+}
+
+//
+// Testes
+//
+try {
+  var votos = new Votos(1000)
+  votos.validos = 800
+  votos.brancos = 150
+  votos.nulos = 50
+
+  assert.equal(0.8, votos.percValidos())
+  assert.equal(0.15, votos.percBrancos())
+  assert.equal(0.05, votos.percNulos())
+} catch (e) {
+  console.log(e)
+}
+
+//
+// Classe Votos
+//
+function Votos(total_eleitores) {
+  ;(this.total_eleitores = total_eleitores),
+    (this.validos = 0),
+    (this.brancos = 0),
+    (this.nulos = 0)
+
+  this.percValidos = function () {
+    return this.validos / this.total_eleitores
+  }
+
+  this.percBrancos = function () {
+    return this.brancos / this.total_eleitores
+  }
+
+  this.percNulos = function () {
+    return this.nulos / this.total_eleitores
+  }
+}
