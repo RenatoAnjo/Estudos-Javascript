@@ -2321,3 +2321,16 @@ function Votos(total_eleitores) {
     return this.nulos / this.total_eleitores
   }
 }
+
+//Condicional - switch
+
+switch (action) {
+  case 'draw':
+    drawit()
+    break
+  case 'eat':
+    eatit()
+    break
+  default:
+    donothing()
+}
