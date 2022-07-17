@@ -2334,3 +2334,28 @@ switch (action) {
   default:
     donothing()
 }
+
+//Fibonacci No Javascript Fn = (Fn - 1) + (Fn - 2)
+
+const fibonacci = num => {
+  if (num <= 1) return 1
+
+  return fibonacci(num - 1) + fibonacci(num - 2)
+}
+
+function fb() {
+  const fibonacci = (num, memo) => {
+    // Recebe os números anteriores
+    // ou um novo objeto, se for a primeira vez
+    memo = memo || {}
+
+    // Verifica se já existe o
+    // valor calculado anteriormente
+    if (memo[num]) return memo[num]
+    if (num <= 1) return 1
+
+    // Caso realmente não tenha,
+    // executa normalmente o código
+    return (memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo))
+  }
+}
