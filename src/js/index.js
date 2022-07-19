@@ -2395,3 +2395,20 @@ http.createServer(function (req, res) {
 
 
 console.log('Servidor rodando em %s na %s', localAddress, listenPort); */
+
+var nome
+var email
+var num = 0
+
+function escrever() {
+  info = 'Usuário número ' + ++num + '\n'
+  info += 'Nome: ' + nome + '\n'
+  info += 'E-mail: ' + email + '\n\n'
+}
+
+function escrever(quadro) {
+  info = 'Usuário número ' + ++num + '\n'
+  info += 'Nome: ' + nome + '\n'
+  info += 'E-mail: ' + email + '\n\n'
+  quadro.value += info
+}
