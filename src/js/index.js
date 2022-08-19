@@ -2412,3 +2412,29 @@ function escrever(quadro) {
   info += 'E-mail: ' + email + '\n\n'
   quadro.value += info
 }
+
+//Implemente a função ao lado, que retorna as strings sim ou não, indicando se os três valores passados são iguais.
+//Exemplo: deve retornar sim se forem passados 100, 100 e 100.
+//Exemplo: deve retornar não se passados 100, 100 e 50.
+
+function driven(number1, number2, number3) {
+if (number1 && number2 || number2 && number3 || number3 && number1){
+return "sim"
+} else {
+return "não"
+}
+}
+
+//É Palíndromo
+
+function ehPalindromo(string) {
+  var reversed = string.split('').reverse().join('');
+  if (string === reversed) {
+    return "sim";
+
+  } else {
+
+    return "não";
+
+  }
+}
