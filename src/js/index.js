@@ -2438,3 +2438,21 @@ function ehPalindromo(string) {
 
   }
 }
+
+/* Média Ponderada
+Implemente a função ao lado que recebe como parâmetros 4 números (2 valores e 2 pesos) e retorna o valor da média ponderada entre os valores.
+
+Para se calcular a média ponderada entre dois números, por exemplo 5 e 10, com os respectivos pesos de ponderação 2 e 3 devemos: multiplicar os números pelos pesos, ou seja, calcular 5*2=10 e 10*3=30; depois devemos somar as quantidades obtidas, ou seja 10+30=40; por fim, dividimos o número obtido pela soma dos pesos, ou seja, a soma dos pesos aqui vale 2+3=5 logo 40/5=8. O último valor obtido é a média ponderada que, nesse caso, vale 8.
+
+Exemplo: se passarmos como argumento valor1=5, peso1=2, nota2=10, peso2=3, a função deve retornar o número 8. */
+
+function mediaPonderada (nota1, peso1, nota2, peso2) {
+  // escreva seu código aqui :)
+  	let somaPeso1 = nota1 * peso1 ;
+  	let somaPeso2 = nota2 * peso2 ;
+  	let somaTotalPeso = peso1 + peso2 ;
+  	let resultadoFinal = (somaPeso1 + somaPeso2) / somaTotalPeso ;
+  	return resultadoFinal ;
+  
+}
+
