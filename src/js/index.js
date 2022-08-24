@@ -2456,3 +2456,54 @@ function mediaPonderada (nota1, peso1, nota2, peso2) {
   
 }
 
+/* **Par Ou Ímpar**
+Implemente a função ao lado, que retorna Par ou Ímpar dependendo se o número passado é par ou ímpar.
+
+Exemplo: deve retornar Ímpar quando passado numero=5 */
+
+function parOuImpar (numero) {
+if (numero%2 == 0)
+return "par";
+else
+return "impar";
+}
+
+/* Decidir Compra
+Implemente a função ao lado que recebe como parâmetros 2 números, o valor da parcela e a quantidade de parcelas, e retorna Vou comprar ou Não vou comprar de acordo com a seguinte regra:
+
+- Valores acima de 1000 e apenas no caso em que se tem 10 ou mais parcelas sempre se compra
+- Valores acima de 500 e com 5 ou mais parcelas, também, sempre se compra
+- Valores menores ou iguais a 500 sempre se compra
+- Qualquer outra situação, nunca se compra
+
+Exemplo: deve retornar "Vou comprar" quando passados preco=1200 e parcelas=10
+
+Exemplo: deve retornar "Vou comprar" quando passados preco=700 e parcelas=6
+
+Exemplo: deve retornar "Vou comprar" quando passados preco=400 e parcelas=3
+
+Exemplo: deve retornar "Não vou comprar" quando passados preco=1200 e parcelas=6
+
+condição 1: Valores acima de 1000 e apenas no caso em que se tem 10 ou mais parcelas sempre se compra
+
+(> 1000 && >= 10)
+
+- Valores acima de 500 e com 5 ou mais parcelas, também, sempre se compra
+(parcela > 500 && quantidade >= 5)
+- Valores menores ou iguais a 500 sempre se compra
+(parcela <= 500) */
+
+function decidirCompra (preco, parcelas) {
+  if (preco > 1000 && parcelas >= 10) {
+    return "Vou comprar"; 
+ } if ((preco > 500 && preco < 1000) && parcelas >= 5) {
+ return "Vou comprar"; 
+  }  if (preco <= 500 ) {
+      return "Vou comprar"; 
+ } { 
+  return "Não vou comprar";
+
+
+}
+}
+
