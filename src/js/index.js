@@ -2594,3 +2594,23 @@ while (msg === "ok"){
     alert(`${novaTecnologia} é realmente uma tecnologia muito legal!`)
     msg = prompt("Tem mais alguma tecnologia que você gostaria de aprender? Digite 'ok' em caso positivo.");
 }
+
+
+/* 4  4/7: 👩🏽‍💻 Mais loops e randomização */
+
+const numeroAdivinhacao = 7;
+let chute = "";
+let acertou = false;
+
+for(let contador = 0; contador < 3; contador++){    
+    chute = prompt("Tente adivinhar o número de 0 a 10:");
+    if(chute == numeroAdivinhacao){
+        alert(`Parabéns, você acertou! O número era ${numeroAdivinhacao}.`);
+        acertou = true;
+        break;
+    }
+    alert("Errado!");
+}
+if(!acertou){
+    alert(`Infelizmente, você não acertou. O número era ${numeroAdivinhacao}!`);
+}
