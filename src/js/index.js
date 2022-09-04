@@ -2970,3 +2970,57 @@ for(let i = 0; i < 11; i++){
     console.log("5 x " + i + " = " + 5*i);
 }
 
+//array meotodos
+
+/*.forEach() Caso você precise executar algum código para cada elemento do Array, executar um forEach é muito mais simples do que criar um for ou while, 
+já que não precisamos declarar variáveis de controle.*/
+
+let myHTML = '<ul>'
+const numbersList = [1, 2, 3, 4, 5];
+
+numbersList.forEach((number, index, array) => {
+	myHTML += `<li>${number}</li>`;
+});
+myHTML += '</ul>';
+
+
+
+let myHTML = '<ul>'
+const numbersList = [1, 2, 3, 4, 5];
+
+numbersList.forEach(number => myHTML += `<li>${number}</li>` );
+myHTML += '</ul>';
+
+
+//.map()
+/* Nós utilizamos o .map() quando queremos fazer alguma modificação nos elementos de um Array.*/
+
+
+const usersList = [
+	{name: 'João', credit: 500},
+	{name: 'Maria', credit: 800}
+];
+
+const newUsersList = usersList.map((user, index, array) => {
+	user.credit += 100;
+	return user;
+})
+
+[
+	{name: 'João', credit: 600},
+	{name: 'Maria', credit: 900}
+];
+
+const newUsersList = usersList.map((user, index, array) => {
+	return user.name;
+})
+/* Resultado:
+[ 'João', 'Maria' ]
+*/
+
+[1, 2, 3, 4, 5].map(number => number * 2);
+/* Resultado:
+[2, 4, 6, 8, 10]
+*/
+
+
