@@ -3023,4 +3023,40 @@ const newUsersList = usersList.map((user, index, array) => {
 [2, 4, 6, 8, 10]
 */
 
+// .filter()
+/* Como o próprio nome indica, serve para filtrarmos os elementos de um Array. Passamos para ele uma função. Se essa função retornar true,
+o elemento será inserido no novo Array que será criado. Se a função retornar false, o elemento será ignorado */
 
+const usersList = [
+	{name: 'João', credit: 600},
+	{name: 'Maria', credit: 900},
+	{name: 'Carlos', credit: 300},
+	{name: 'Vanessa', credit: 200},
+];
+
+const newUsersList = usersList.filter((user, index, array) => user.credit > 500);
+/* Resultado:
+[
+	{name: 'João', credit: 600},
+	{name: 'Maria', credit: 900}
+]
+*/
+
+
+//.find()
+/* Usamos esse método quando queremos encontrar algum elemento dentro no Array. Para isso, passamos uma função que irá retornar true 
+ou false. O primeiro true que for retornado irá finalizar a função e retornar o elemento em que estamos. Usamos esse método quando queremos 
+encontrar algum elemento dentro no Array. Para isso, passamos uma função que irá retornar true ou false. O primeiro true que for retornado 
+irá finalizar a função e retornar o elemento em que estamos.*/
+
+const usersList = [
+	{name: 'João', credit: 600},
+	{name: 'Maria', credit: 900},
+	{name: 'Carlos', credit: 300},
+	{name: 'Vanessa', credit: 200},
+];
+
+const carlos = usersList.find((user, index, array) => user.name === 'Carlos');
+/* Resultado:
+	{name: 'Carlos', credit: 300}
+*/
