@@ -3060,3 +3060,38 @@ const carlos = usersList.find((user, index, array) => user.name === 'Carlos');
 /* Resultado:
 	{name: 'Carlos', credit: 300}
 */
+
+
+/* .findIndex()
+Faz o mesmo que o .find(), mas retorna o índice do elemento encontrado ao invés de retornar o próprio elemento. */
+
+const usersList = [
+	{name: 'João', credit: 600},
+	{name: 'Maria', credit: 900},
+	{name: 'Carlos', credit: 300},
+	{name: 'Vanessa', credit: 200},
+];
+
+const carlos = usersList.findIndex((user, index, array) => user.name === 'Carlos');
+/* Resultado:
+	2
+*/
+
+
+/* .every()
+Serve para testarmos se todos os elementos do Array passam em uma condição.
+
+Passamos uma função que retorna true ou false. Se todos os retornos forem true
+significa que todos os elementos passaram no teste, e a função retornará true. */
+
+
+const usersList = [
+	{name: 'João', credit: 600},
+	{name: 'Maria', credit: 900},
+	{name: 'Carlos', credit: 300},
+	{name: 'Vanessa', credit: 200},
+];
+
+const result1 = usersList.every((user, index, array) => user.credit < 1000);
+const result2 = usersList.every(user => user.credit < 500);
+
