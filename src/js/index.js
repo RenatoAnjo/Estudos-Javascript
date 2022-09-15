@@ -3095,3 +3095,36 @@ const usersList = [
 const result1 = usersList.every((user, index, array) => user.credit < 1000);
 const result2 = usersList.every(user => user.credit < 500);
 
+
+//.some()
+
+/* O .some() faz algo parecido com o .every(). A diferença é que o .every() só retorna true se todos os elementos passarem no teste. 
+O .some() retorna true se pelo menos um elemento do Array passar no teste. */
+
+const usersList = [
+	{name: 'João', credit: 600},
+	{name: 'Maria', credit: 900},
+	{name: 'Carlos', credit: 300},
+	{name: 'Vanessa', credit: 200},
+];
+
+const result = usersList.some((user, index, array) => user.credit === 300);
+
+// .sort()
+
+/* O .sort() serve para ordenar os elementos de Arrays. Muitas pessoas utilizam este método de maneira errada,
+apenas executando array.sort(). Isso pode causar retornos inesperados, pois os elementos serão convertidos em texto.
+
+O correto é passar uma função que compare dois elementos. Assim, podemos ordenar um Array com qualquer tipo de objeto, 
+ordenando por qualquer propriedade. */
+
+const numbersList = [4, 5, 7, 8, 2];
+const orderedList = numbersList.sort((a, b) => {
+	if(a < b){
+	   return -1;
+	} else if(a > b){
+		return 1;
+	}
+	return 0;
+})
+
