@@ -3128,3 +3128,20 @@ const orderedList = numbersList.sort((a, b) => {
 	return 0;
 })
 
+
+
+
+
+
+// .reduce()
+
+/* Esta função serve para reduzirmos o conteúdo de um Array para apenas um elemento.
+O exemplo mais clássico é somar todos os valores de um Array. */
+
+const numbersList = [1, 2, 3];
+const total = numbersList.reduce((total, currentElement) => total + currentElement)
+/* Resultado:
+	6
+*/
+
+
