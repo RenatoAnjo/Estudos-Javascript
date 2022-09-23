@@ -3156,3 +3156,21 @@ removeChild	Remove um elemento filho.
 parentNode	Retorna o nodo pai de um nodo. */
 
 
+if (algumNodo.nodeType == Node.ELEMENT_NODE) {
+  //código aqui
+} else {
+  if (algumNodo.nodeType == Node.TEXT_NODE) {
+    //código aqui
+  }
+}
+
+  function testandoArvoreDOM() {
+        var element = document.documentElement.lastChild;
+        alert("Eu sou o nodo" + element.nodeName);
+
+        var outroElemento = document.getElementsByTagName('h1')[0];
+        alert("Eu sou o nodo " + outroElemento.nodeValue);
+
+        var filho = outroElemento.firstChild;
+        alert("Eu sou o nodo " + filho.nodeValue);
+      }
