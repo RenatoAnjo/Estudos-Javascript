@@ -3145,3 +3145,14 @@ const total = numbersList.reduce((total, currentElement) => total + currentEleme
 */
 
 
+/*documentElement	Captura o elemento raiz <html> de um documento HTML.
+getElementById	Busca um elemento da página Web com o uso do atributo id do elemento.
+createElement	Cria um nodo elemento na página.
+createAttribute	Cria um nodo atributo na página.
+createTextNode	Cria um nodo texto na página.
+getElementsByTagName	Retorna um array dos elementos com o mesmo nome.
+appendChild	Insere um novo elemento filho.
+removeChild	Remove um elemento filho.
+parentNode	Retorna o nodo pai de um nodo. */
+
+
