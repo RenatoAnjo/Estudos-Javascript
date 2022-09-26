@@ -3187,3 +3187,22 @@ elem.appendChild(texto);
 var lista = document.getElementsByTagName('ul')[0];
 lista.appendChild(elem);
 
+
+var titulo = document.createElement('h1');
+var texto  = document.createTextNode("Um título qualquer");
+titulo.appendChild(texto);
+
+// Buscar elemento pai
+var elemento_pai = document.body;
+
+// Criar elemento
+var titulo = document.createElement('h1');
+
+// Criar o nó de texto
+var texto = document.createTextNode("Um título qualquer");
+
+// Anexar o nó de texto ao elemento h1
+titulo.appendChild(texto);
+
+// Agora sim, inserir (anexar) o elemento filho (titulo) ao elemento pai (body)
+elemento_pai.appendChild(titulo);
