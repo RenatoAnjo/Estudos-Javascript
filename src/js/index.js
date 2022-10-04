@@ -3206,3 +3206,51 @@ titulo.appendChild(texto);
 
 // Agora sim, inserir (anexar) o elemento filho (titulo) ao elemento pai (body)
 elemento_pai.appendChild(titulo);
+
+<body>
+    <h1>Um título qualquer</h1>
+</body>
+
+var titulo = document.createElement('h1');
+titulo.textContent = "Um título qualquer"
+
+
+// Buscar elemento pai
+var elemento_pai = document.body;
+
+// Criar elemento
+var titulo = document.createElement('h1');
+
+// Criando o nó de texto de outra forma
+titulo.textContent = "Um título qualquer"
+
+// Inserir (anexar) o elemento filho (titulo) ao elemento pai (body)
+elemento_pai.appendChild(titulo);
+
+<ul>
+    <li>primeiro item</li>
+    <li>segundo item</li>
+    <li>quarto item</li>
+</ul>
+
+//
+// Criando o terceiro elemento
+//
+var novoElem  = document.createElement('li');
+var texto     = document.createTextNode('terceiro item');
+novoElem.appendChild(texto);
+
+//
+// Recuperando a lista
+//
+var lista = document.getElementsByTagName('ul')[0];
+
+//
+// Recuperando os itens
+//
+var itens = document.getElementsByTagName('li');
+
+//
+// Inserindo com insertBefore()
+//
+lista.insertBefore(novoElem, itens[0]);
