@@ -3254,3 +3254,11 @@ var itens = document.getElementsByTagName('li');
 // Inserindo com insertBefore()
 //
 lista.insertBefore(novoElem, itens[0]);
+
+
+//resumo
+document.createElement("nome-da-tag") para criar um elemento
+document.createTextNode("algum texto") para criar um nó de texto
+elemento_pai.appendChild(elemento_filho) para inserir um elemento na última posição
+elemento_pai.insertBefore(elemento_filho, elemento_anterior) pra inserir um elemento em posição específica
+elemento_pai.removeChild(elemento_filho) para remover um elemento
