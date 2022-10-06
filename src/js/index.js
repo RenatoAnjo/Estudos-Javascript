@@ -3262,3 +3262,23 @@ document.createTextNode("algum texto") para criar um nó de texto
 elemento_pai.appendChild(elemento_filho) para inserir um elemento na última posição
 elemento_pai.insertBefore(elemento_filho, elemento_anterior) pra inserir um elemento em posição específica
 elemento_pai.removeChild(elemento_filho) para remover um elemento
+
+/* HTML DOM Document 
+
+O objeto de documento HTML DOM é o proprietário de todos os outros objetos em sua página web, se você deseja acessar qualquer elemento HTML em uma página, comece acessando o objeto document. 
+
+Vejamos alguns exemplos de como utilizar o objeto document para acessar e manipular HTML: 
+
+– Método document.getElementById(id) : Encontra um elemento pelo id 
+
+– Método document.getElementByTagName(name) : Encontra elementos pela tag HTML 
+
+– Método document.getElementByClassName(name) : Encontra elementos pela classe html 
+
+Após acessar o elemento, temos a opção de alterá-lo da seguinte forma: 
+
+Propriedade element.innerHTML=”novo conteúdo” : Altera o conteúdo interno de um elemento HTML 
+Propriedade element.attribute=”novo valor” : Altera o valor do atributo de um elemento HTML 
+Propriedade element.style.property=”novo estilo” : Altera o estilo de um elemento HTML 
+Método element.setAttribute(attribute, value) : Altera o valor do atributo de um elemento HTML */
+
