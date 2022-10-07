@@ -3282,3 +3282,25 @@ Propriedade element.attribute=”novo valor” : Altera o valor do atributo de u
 Propriedade element.style.property=”novo estilo” : Altera o estilo de um elemento HTML 
 Método element.setAttribute(attribute, value) : Altera o valor do atributo de um elemento HTML */
 
+
+/*
+Método document.getElementById(id) : Encontra um elemento pelo id 
+
+– Método document.getElementByTagName(name) : Encontra elementos pela tag HTML 
+
+– Método document.getElementByClassName(name) : Encontra elementos pela classe html 
+
+Após acessar o elemento, temos a opção de alterá-lo da seguinte forma: 
+
+Propriedade element.innerHTML=”novo conteúdo” : Altera o conteúdo interno de um elemento HTML 
+Propriedade element.attribute=”novo valor” : Altera o valor do atributo de um elemento HTML 
+Propriedade element.style.property=”novo estilo” : Altera o estilo de um elemento HTML 
+Método element.setAttribute(attribute, value) : Altera o valor do atributo de um elemento HTML 
+Também podemos adicionar e deletar elementos da página da seguinte forma: 
+
+Método document.createElement(element) : Cria um elemento HTML 
+Método document.removeChild(element) : Remove um elemento HTML 
+Método document.appendChild(element) : Adiciona um elemento HTML 
+Método document.replaceChild(new, old) : Substitui um elemento HTML 
+Médoto document.write(text) : Escreve no fluxo de saída HTML 
+*/
