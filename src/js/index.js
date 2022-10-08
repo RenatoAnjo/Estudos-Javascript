@@ -3304,3 +3304,12 @@ Método document.appendChild(element) : Adiciona um elemento HTML
 Método document.replaceChild(new, old) : Substitui um elemento HTML 
 Médoto document.write(text) : Escreve no fluxo de saída HTML 
 */
+
+/*
+O navegador dispara muitos eventos. Uma lista completa está disponível no MDN, mas aqui estão alguns dos tipos e nomes de eventos mais comuns:
+eventos de mouse (MouseEvent): mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout, contextmenu
+eventos de toque (TouchEvent): touchstart, touchmove, touchend, touchcancel
+eventos de teclado (KeyboardEvent): keydown, keypress, keyup
+eventos de formulário: focus, blur, change, submit
+eventos de janela: scroll, resize, hashchange, load, unload
+*/
