@@ -3325,3 +3325,28 @@ onMouseOver	define ação quando o usuário passa o mouse sobre o elemento
 onMouseOut	define ação quando o usuário retira o mouse sobre o elemento
 onSubmit	define ação ao enviar um formulário
 */
+
+/*
+
+Usando evento externo
+Para chamar um evento externo iremos precisar de um manipulador de eventos, nesse caso vamos usar o event listener que adiciona ou remove um evento sobre qualquer elemento. O Event Listener disponibiliza duas funções principais, são elas:
+
+addEvent - Adiciona uma função que será disparada quando ocorrer determinado evento no objeto.
+removeEvent - Remove um listener previamente adicionado em um objeto e retorna true em caso de sucesso.
+Agora vamos ver um exemplo de como utilizar o Event Listener.
+
+*/
+
+<script type="text/javascript" src="/path/to/event-listener.js"></script>
+
+<form>
+	<input type="text" name="a" />
+	<input type="submit" />
+</form>
+
+<script type="text/javascript">
+var f = document.forms[0];
+addEvent(f, "submit", function( e ) { alert(f.a.value);return false; });
+addEvent(f.a, "keyup", function( e ) { f.a.value=f.a.value.toUpperCase(); });
+</script>
+
