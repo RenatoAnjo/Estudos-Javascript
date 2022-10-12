@@ -3379,3 +3379,30 @@ else
 <p>Irá aparecer um alert dizendo se os cookies estão ou não liberados em seu navegador</p>
 </body>
 </html>
+
+
+/*
+onChange
+O evento onChange é utilizado para que seja realizada determinada ação após alguma mudança. No exemplo abaixo iremos fazer essa mudança acontecer ao clicarmos fora do input text.
+*/
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usando eventos no Javascript</title>
+<script>
+function myFunction()
+{
+var x=document.getElementById("fname");
+x.value=x.value.toUpperCase();
+}
+</script>
+</head>
+<body>
+
+Insira seu Nome: <input type="text" id="fname" onchange="myFunction()">
+<p>
+Ao clicarmos fora do input text o texto escrito nele ficará todo em caixa alta.</p>
+
+</body>
+</html>
