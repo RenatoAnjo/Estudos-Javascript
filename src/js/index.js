@@ -3350,3 +3350,32 @@ addEvent(f, "submit", function( e ) { alert(f.a.value);return false; });
 addEvent(f.a, "keyup", function( e ) { f.a.value=f.a.value.toUpperCase(); });
 </script>
 
+/*
+onLoad
+O evento onload pode ser usado quando queremos que algo seja carregado junto com o carregamento da página.
+*/
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usando eventos no Javascript</title>
+</head>
+<body onload="checkCookies()">
+
+<script>
+function checkCookies()
+{
+if (navigator.cookieEnabled==true)
+	{
+	alert("Cookies são permitidos")
+	}
+else
+	{
+	alert("Cookies não são permitidos")
+	}
+}
+</script>
+
+<p>Irá aparecer um alert dizendo se os cookies estão ou não liberados em seu navegador</p>
+</body>
+</html>
