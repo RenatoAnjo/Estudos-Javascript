@@ -3406,3 +3406,35 @@ Ao clicarmos fora do input text o texto escrito nele ficará todo em caixa alta.
 
 </body>
 </html>
+
+/*
+
+onMouseOver e onMouseOut
+Esses eventos são responsáveis pelas ações que o usuário faz com o mouse, passando o mouse no elemento e tirando o mouse do elemento, respectivamente.
+*/
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usando eventos no Javascript</title>
+</head>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+>Passe o mouse em mim</div>
+
+<script>
+function mOver(obj)
+{
+obj.innerHTML="Obrigado"
+}
+
+function mOut(obj)
+{
+obj.innerHTML="Passe o mouse em mim"
+}
+</script>
+
+</body>
+</html>
