@@ -3438,3 +3438,35 @@ obj.innerHTML="Passe o mouse em mim"
 
 </body>
 </html>
+
+/*
+onmousedown, onmouseup e onclick
+Nesse exemplo iremos ver como trabalhar com o clique, o segurar o clique e o soltar do clique.
+*/
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usando eventos no Javascript</title>
+</head>
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)" 
+>Clique aqui</div>
+
+<script>
+function mDown(obj)
+{
+obj.style.backgroundColor="#1ec5e5";
+obj.innerHTML="Solte o clique"
+}
+
+function mUp(obj)
+{
+obj.style.backgroundColor="#D94A38";
+obj.innerHTML="Obrigado"
+}
+</script>
+
+</body>
+</html>
