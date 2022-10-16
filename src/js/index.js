@@ -3470,3 +3470,20 @@ obj.innerHTML="Obrigado"
 
 </body>
 </html>
+
+/* método setTimeout() define um cronômetro que executa uma
+função ou trecho de código especificado assim que expira.
+ O setTimeout, por padrão, executa o código somente uma vez */
+
+
+function horarioAtual() {
+  let dataAtual = new Date(); //variável recebe a data atual
+  let hora = dataAtual.toLocaleTimeString(); // variável recebe a data atual convertida para hora atual
+  console.log(hora); //hora será mostrada no console
+}
+setTimeout(horarioAtual, 3000); //método executa a função após três segundos
+
+function msgEncerramento() {
+alert('Seu tempo acabou!! Tente novamente!!');
+}
+setTimeout(msgEncerramento, 3000)
