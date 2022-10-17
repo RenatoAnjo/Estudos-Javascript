@@ -3487,3 +3487,27 @@ function msgEncerramento() {
 alert('Seu tempo acabou!! Tente novamente!!');
 }
 setTimeout(msgEncerramento, 3000)
+
+setTimeout(() => {
+  console.log('1. HTML')
+
+  setTimeout(() => {
+    console.log('2. CSS')
+
+    setTimeout(() => {
+      console.log('3. JavaScript')
+
+      setTimeout(() => {
+        console.log('4. React')
+
+        setTimeout(() => {
+          console.log('5. TypeScript')
+
+          setTimeout(() => {
+            console.log('6. Next JS')
+          }, 800)
+        }, 800)
+      }, 800)
+    }, 800)
+  }, 800)
+}, 0)
