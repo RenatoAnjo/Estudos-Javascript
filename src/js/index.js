@@ -1,4 +1,4 @@
-Um/* 
+/* 
  Minicurso de Javascript Driven Education algoritmos !
 Funcao somar dois numeros
 */
@@ -3511,3 +3511,18 @@ setTimeout(() => {
     }, 800)
   }, 800)
 }, 0)
+
+
+/*
+Uso do setTimeout() para mostrar a hora atual de 
+um relógio digital no navegador
+*/
+function horaAtual() {
+
+    setTimeout(function(){
+
+    let hora = new Date().toLocaleTimeString();
+    document.getElementById("rel").innerHTML = hora;
+
+  }, 1000)
+}
