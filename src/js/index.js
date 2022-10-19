@@ -3526,3 +3526,14 @@ function horaAtual() {
 
   }, 1000)
 }
+
+/*O método setInterval precisa de pelo menos dois parâmetros para funcionar. O primeiro é a função que será executada, enquanto o segundo é o tempo em milissegundos em que a função deve se repetir.*/
+function horarioAtual() {
+
+  let hora = new Date().toLocaleTimeString();
+
+  console.log(hora);
+
+}
+
+setInterval(horarioAtual, 1000);
