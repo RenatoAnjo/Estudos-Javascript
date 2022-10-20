@@ -3537,3 +3537,20 @@ function horarioAtual() {
 }
 
 setInterval(horarioAtual, 1000);
+let contador = 0;
+
+function somaContador(valor)
+{
+    contador = contador + valor;
+    console.log(contador);
+}
+
+setInterval(somaContador, 1000, 1)
+let contador = 0;
+
+/*
+método setInterval precisa de pelo menos
+ dois parâmetros para funcionar. O primeiro 
+é a função que será executada, enquanto o 
+segundo é o tempo em milissegundos em que a função deve se repetir.
+*/
