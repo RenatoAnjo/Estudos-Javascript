@@ -3554,3 +3554,34 @@ método setInterval precisa de pelo menos
 é a função que será executada, enquanto o 
 segundo é o tempo em milissegundos em que a função deve se repetir.
 */
+
+
+// strings
+console.log('Hello, world')
+
+const email = 'renato_anjo.s@hotmail.com'
+
+console.log(email)
+
+// concatenacao de strings
+
+const firstName = 'Renato'
+const lastName = 'Anjo'
+const fullName = firstName + ' '  +lastName
+
+// acessando caracteres 
+console.log(fullName[2])
+
+// comprimento de uma string 
+console.log(fullName.length)
+
+// metodos de string
+console.log(fullName.toUpperCasa())
+
+const result = full name.toLowerCase()
+
+console.log(result, fullName)
+
+const index = email.indexOf('@')
+
+console.log(index)
