@@ -3585,3 +3585,50 @@ console.log(result, fullName)
 const index = email.indexOf('@')
 
 console.log(index)
+
+let s = 'Hello, world'; // Comece com algum texto.
+
+// Obtendo porções de uma string
+s.substring(1,4) // => 'ell': o 2º, 3º e 4º caracteres.
+s.slice(1,4) // => 'ell': mesma coisa
+s.slice(-3) // => 'rld': últimos 3 caracteres
+s.split(', ') // => ['Hello', 'world']: dividir na string delimitadora
+
+// Procurando uma string
+s.indexOf('l') // => 2: posição da primeira letra l
+s.indexOf('l', 3) // => 3: posição do primeiro 'l' em ou após 3
+s.indexOf('zz') // => -1: s não inclui a substring 'zz'
+s.lastIndexOf('l') // => 10: posição da última letra l
+
+// Funções de pesquisa booleana no ES6 e posterior
+s.startsWith('Hell') // => true: A string começa com este?
+s.endsWith('!') // => false: s não termina com isso?
+s.includes('or') // => true: s inclui substring 'or'
+
+// Criação de versões modificadas de uma string
+s.replace('llo', 'ya') // => 'Heya, world'
+s.toLowerCase() // => 'hello, world'
+s.toUpperCase() // => 'HELLO, WORLD'
+s.normalize() // Normalização Unicode NFC: ES6
+s.normalize('NFD') // Normalização NFD. Também 'NFKC', 'NFKD'
+
+// Inspecionando caracteres individuais (16 bits) de uma string
+s.charAt(0) // => 'H': o primeiro caractere
+s.charAt(s.length-1) // => 'd': o último character
+s.charCodeAt(0) // => 72: Número de 16 bits na posição especificada
+s.codePointAt(0) // => 72: ES6, funciona para pontos de código > 16 bits
+
+// Funções de preenchimento de uma string no ES2017
+'x'.padStart(3) // => '   x': adiciona espaços à esquerda para um comprimento de 3
+'x'.padEnd(3) // => 'x   ': adicione espaços à direita para um comprimento de 3
+'x'.padStart(3, '*') // => '***x': adicione asteriscos à esquerda com comprimento de 3
+'x'.padEnd(3, '-') // => 'x---': adicione travessões à direita para um comprimento de 3
+
+// Funções de corte de espaço. trim() é ES5; outros ES2019
+' test '.trim() // => 'test': remove os espaços no início e no final
+' test '.trimStart() // => 'test ': remove os espaços à esquerda. Também trimLeft
+' test '.trimEnd() // => ' test': remove os espaços à direita. Também trimRight
+
+// Métodos de string diversos
+s.concat('!') // => 'Hello, world!': apenas use o operador + em vez
+'<>'.repeat(5) // => '<><><><><>': concatena n cópias. ES6
