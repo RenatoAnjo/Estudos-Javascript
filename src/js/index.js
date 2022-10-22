@@ -3632,3 +3632,12 @@ s.codePointAt(0) // => 72: ES6, funciona para pontos de código > 16 bits
 // Métodos de string diversos
 s.concat('!') // => 'Hello, world!': apenas use o operador + em vez
 '<>'.repeat(5) // => '<><><><><>': concatena n cópias. ES6
+
+// metodos comuns de strings
+const email = 'renato_anjo.s@hotmail.com'
+
+// const lastIndexOfA = email.lastIndexOf('a')
+// const emailSlice = email.slice(4, 9)
+const emailReplace = email.replace('l', 'y')
+
+console.log(emailReplace, email)
