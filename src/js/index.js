@@ -3641,3 +3641,21 @@ const email = 'renato_anjo.s@hotmail.com'
 const emailReplace = email.replace('l', 'y')
 
 console.log(emailReplace, email)
+
+// inteiros e decimais
+const radius = 10
+const pi = 3.14
+
+// operadores aritmeticos 
+const area = pi * radius ** 2
+
+// ordem de operacoes 
+const crazyOperation = 5 * (10 - 3) **2
+
+//operadores de incremento e decremento
+let postLikes = 10
+
+// concatenacao de string com numero
+const likesMessage = 'O post tem' + postLikes + ' likes. '
+
+console.log(likesMessage)
