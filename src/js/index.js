@@ -3659,3 +3659,24 @@ let postLikes = 10
 const likesMessage = 'O post tem' + postLikes + ' likes. '
 
 console.log(likesMessage)
+
+/*Template strings */
+
+const postTitle = 'E bolacha ou biscoito?'
+const postAuthor = 'Matheus Saad'
+const postComments = 15
+
+//usando concatenacao 
+cost postMessage = 'O post "' + postTitle + '"do ' postAuthor + ' , tem ' + postComments + 'comentarios.'
+
+//usando template strings 
+const postMessage = 'O post "$(postTitle)", do $(postAuthor), tem $(postComments) comentarios.'
+
+//criando templates HTML
+
+const html
+	<h2>${postTitle}</h2>
+	<p>Autor: ${postoAuthor}</p>
+	<span>Este post tem ${postComments} comentarios</span>
+	
+console.log(html)
