@@ -3694,3 +3694,22 @@ const pushToHeroes = heroes.push('Cyclops', 'Hulk')
 const popHeroes = heroes.pop ()
 
 console.log(heroes)
+/*Booleans e comparações */
+
+//operadores de comparacao 
+const age = 31
+const name = 'renato'
+
+// console.log(age == 31)
+// console.log(age ==35)
+// console.log(age =!31)
+// console.log(age>31)
+// console.log(age <32)
+// console.log(age<=31)
+// console.log(age >= 31)
+
+ console.log(name == 'renato')
+ console.log(name == 'Renato')
+ console.log(name > 'Benato')
+ console.log(name > 'Renato')
+ console.log(name > 'belinha')
