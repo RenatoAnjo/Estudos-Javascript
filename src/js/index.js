@@ -3730,3 +3730,26 @@ const age = 31
 
 console.log(age !== 31)
 console.log(age !== '31') 
+
+/* Conversão de tipos*/
+
+// console.log(typeof score)
+
+const crazyConversion = Number('Maçã')
+const convertNumber = String(97)
+const booleanConversion = Boolean(10)
+
+console.log(boolean('0'))
+
+/*
+Valores falsy:
+	- false
+	- 0
+	- == , '' , ''
+	- null
+	- underfined
+	- NaN
+	
+Valores truthy:
+	- qualquer valor que nao é falsy	
+*/
