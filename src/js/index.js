@@ -3792,3 +3792,14 @@ if (password.length >=12) {
 } else {
 	console.log('a senha deve conter  ou mais caracteres')
 }				
+
+// operadores logicos - ou || e E &&
+const password = 'oildr'
+
+if (password.length >= 12 && password.includes('1')) {
+	console.log('senha muito forte')
+} else if (password.length >= 8 || password.includes >=5) {	
+	console.log('senha forte') 
+} else {
+	console.log(' a senha deve conter 8 ou mais caracteres')
+}		
