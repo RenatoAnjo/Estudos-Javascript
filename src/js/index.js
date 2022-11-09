@@ -3803,3 +3803,20 @@ if (password.length >= 12 && password.includes('1')) {
 } else {
 	console.log(' a senha deve conter 8 ou mais caracteres')
 }		
+
+//breal e continue 
+
+const scores = [50, 25, 0, 30, 100, 20, 10]
+
+for (let i =0; i < scores.length; i++) {
+	if (scores[i] ===0) {
+	continue
+}
+
+console.log('sua pontuacao: ${scores[i]}')
+
+if (scores[i] ===10) {	
+	console.log('parabens, você atingiu a pontuacao maxima')
+	break
+	}
+}	
