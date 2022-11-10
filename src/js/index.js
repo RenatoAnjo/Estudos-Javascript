@@ -3820,3 +3820,28 @@ if (scores[i] ===10) {
 	break
 	}
 }	
+
+
+// switch statement
+
+const grade = 'A'
+
+switch (grade) 
+	case 'A':
+		console.log(' vc tirou um A')
+		break
+	case 'B':
+		console.log(' vc tirou um B')
+		break
+	case 'C':
+		console.log(' vc tirou um C')
+		break
+	case 'D':
+		console.log(' vc tirou um D')
+		break
+	case 'E':
+		console.log(' vc tirou um E')
+		break				
+	default:
+		console.log('nota invalida')
+}			
