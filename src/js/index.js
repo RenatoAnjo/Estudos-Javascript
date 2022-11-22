@@ -4162,3 +4162,17 @@ class App {
     document.getElementById("properties").removeChild(liToRemove)
   }
 }
+
+/*Tabuada */
+
+function mostrarTabuada(){
+            console.log("entrei");
+            var numero = document.querySelector("#numero");
+            var resultado = document.querySelector("#resultado");
+            resultado.innerText = "";
+            for (var i = 0 ; i <= 10 ; i++){
+                var div = document.createElement("div");
+                div.innerText = numero.value* i;
+                resultado.appendChild(div);
+            }
+}
