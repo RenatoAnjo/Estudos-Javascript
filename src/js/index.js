@@ -4396,3 +4396,34 @@ do {
       break
   }
 } while (opcao !== "3");	
+
+/*Trabalhando com Arrays*/	
+	
+const arr = ["Frodo", "Sam", "Merry", "Pippin", "Gandalf", "Aragorn", "Legolas", "Gimli"]
+
+/* Adicionando Elementos*/
+
+// push: Adiciona um elemento no final do array e devolve o novo tamanho do array
+let tamanho = arr.push("Boromir")
+console.log(arr)
+console.log(tamanho)
+
+// unshift: Adiciona um elemento no começo do array e devolve o novo tamanho do array
+tamanho = arr.unshift("Boromir")
+console.log(arr)
+console.log(tamanho)
+	
+/* Remove Elementos */
+	
+// pop: Remove um elemento no final do array e devolve o elemento removido
+let elementoRemovido = arr.pop("Boromir")
+console.log(arr)
+console.log(elementoRemovido)
+
+// shift: Remove um elemento no começo do array e devolve o elemento removido
+elementoRemovido = arr.shift("Boromir")
+console.log(arr)
+console.log(elementoRemovido)
+	
+	
+	
