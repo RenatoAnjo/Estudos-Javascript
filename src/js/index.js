@@ -4502,3 +4502,29 @@ for (let i = 0; i < matriz.length; i++) {
     console.log("Posição: (" + i + ", " + j + ") Valor: " + elemento)
   }
 }		
+	
+/*Funcao*/
+
+// O parâmetro é a entrada da função.
+
+// Ele é como uma variável que fica disponível dentro da função
+// mas que é informada na hora de chamar a função
+function dobro(x) {
+  console.log("O dobre de " + x + " é " + (x * 2))
+}
+dobro(5)
+dobro(7)
+	
+// Se uma função for chamada sem informar o parâmetro
+// o valor usado para ele será o undefined
+dobro()	
+
+// Mas podemos declarar um valor padrão para um parãmetro, assim, 
+// se ele não for informado, o valor padrão será usado no lugar do undefined
+function dizerOla(nome = "mundo") {
+  console.log("Olá, " + nome + "!")
+}
+dizerOla("Isaac")
+dizerOla()	
+	
+	
