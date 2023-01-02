@@ -4916,3 +4916,19 @@ function exibirVaga() {
     "\nCandidatos inscritos:" + candidatosEmTexto
   )
 }	
+
+function inscreverCandidato() {
+  const candidato = prompt("Informe o nome do(a) candidato(a):")
+  const indice = prompt("Informe o índice da vaga para a qual o(a) candidato(a) deseja se inscrever:")
+  const vaga = vagas[indice]
+
+  const confirmacao = confirm(
+    "Deseja inscrever o candidato " + candidato + " na vaga " + indice + "?\n" +
+    "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao + "\nData limite: " + vaga.dataLimite
+  )
+
+  if (confirmacao) {
+    vaga.candidatos.push(candidato)
+    alert("Inscrição realizada")
+  }
+}
