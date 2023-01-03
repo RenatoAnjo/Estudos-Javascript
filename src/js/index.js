@@ -4932,3 +4932,18 @@ function inscreverCandidato() {
     alert("Inscrição realizada")
   }
 }
+
+function excluirVaga() {
+  const indice = prompt("Informe o índice da vaga que deseja excluir:")
+  const vaga = vagas[indice]
+
+  const confirmacao = confirm(
+    "Tem certeza que deseja excluir a vaga " + indice + "?\n" +
+    "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao + "\nData limite: " + vaga.dataLimite
+  )
+
+  if (confirmacao) {
+    vagas.splice(indice, 1)
+    alert("Vaga excluída.")
+  }
+}	
