@@ -4947,3 +4947,18 @@ function excluirVaga() {
     alert("Vaga excluída.")
   }
 }	
+
+function exibirMenu() {
+  const opcao = prompt(
+    "Cadastro de Vagas de Emprego" +
+    "\n\nEscolha uma das opções" +
+    "\n1. Listar vagas disponíveis" +
+    "\n2. Criar uma nova vaga" +
+    "\n3. Visualizar uma vaga" +
+    "\n4. Inscrever um(a) candidato(a)" +
+    "\n5. Excluir uma vaga" +
+    "\n6. Sair"
+  )
+
+  return opcao
+}	
