@@ -5301,6 +5301,7 @@ console.log(startingWithP)
 
 /*desestruturacao de arrays e objetos*/
 
+	/*Encapsulamento*/
 const person = {
   name: "Luke",
   job: "Farmer",
@@ -5330,3 +5331,26 @@ function createUser({ name, job, parents }) {
 const luke = createUser(person)
 
 console.log(luke)
+	
+class Account {
+  #password
+  #balance
+
+  constructor(user) {
+    this.email = user.email
+    this.#password = user.password
+    this.#balance = 0
+  }
+
+  getBalance(email, password) {
+    if (this.#authenticate(email, password)) {
+      return this.#balance
+    } else {
+      return null
+    }
+  }
+
+  #authenticate(email, password) {
+    return this.email === email && this.#password === password
+  }
+}	
