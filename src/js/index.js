@@ -5397,3 +5397,18 @@ console.log(user.friends[0].phone?.ddd)
 console.log(user?.brothers?.length)
 
 console.log(user.brothers?.[5].name)
+
+/*Operador de Coalescência Nula*/
+let a = 0
+
+let b = a || 42
+
+console.log({ a, b })
+
+b = a ?? 42
+
+console.log({a, b})
+
+let c = false ?? 42
+
+console.log({c})
