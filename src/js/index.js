@@ -5750,3 +5750,30 @@ const squares = numbers.map(async number => {
     return number * number
 })
 console.log(squares)
+
+/*Poderíamos usar o Promise.all() para esperar
+ pelos resultados e exibi-los através do .then():*/
+
+Promise.all(squares)).then(results => {
+    console.log(results)
+})
+
+/*Mas se estivermos trabalhando com uma função async
+ podemos usar o await no próprio Promise.all():*/
+
+// ...
+
+async function execute() {
+  console.time('map')
+
+  const squares = await Promise.all(numbers.map(async (number) => {
+    await waitFor(2)
+    return number * number
+  }))
+
+  console.log(squares)
+
+  console.timeEnd('map')
+}
+
+execute()
